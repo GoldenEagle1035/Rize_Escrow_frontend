@@ -1,0 +1,80 @@
+method: post
+url: http://rize2day.com/api/item/get_detail
+data: { id: nftId } 
+description: get detailt information of an NFT 
+
+method: post
+url: http://rize2day.com/api/item/getPopularItems
+data: { limit : 0 }
+description: get recent popular MFTs
+
+method: post
+url: http://rize2day.com/api/collection/getUserCollections
+data: { limit: 90, userId: currentUsr }
+description: get collections user has
+
+method: post
+url: http://rize2day.com/api/users/findOne
+data: { userId: currentUsr._id }
+descriotion: get detailt information of user
+
+method: post
+url: http://rize2day.com/api/item/get_items_of_user
+data: { userId: userId }
+description: get nfts user has
+
+method: post
+url: http://rize2day.com/api/collection/detail
+data: { id: collectionId }
+description: get detailt collection information with ID
+
+method: post
+url: http://rize2day.com/api/item/get_owner_history
+data: { item_id: id }
+description: get owners list of NFT
+
+method: post
+url: http://rize2day.com/api/item/placeAbid
+data: {
+        itemId: NFT ID ,
+        bidder: wallet address of user,
+        price: bidPrice
+      }
+description: do bid to an NFT on auction
+
+method: post
+url: http://rize2day.com/api/item/buynow
+data: {
+        itemId: itemId,
+        buyer: buyer wallet,
+        seller: seller wallet,
+        price: NFT price
+      }
+description: buy an item 
+
+method: post 
+url: https://rize2day.com/api/item/updateForSale
+data: {
+  itemId: item id,
+  period: aution period on Second unit,
+  price: price
+}
+description: place a NFT on to the sale
+
+method: post 
+url: https://rize2day.com/api/item/removeFromSale
+data: {
+  itemId: item id
+}
+description: remove a NFT on to the sale
+
+method: post 
+url: https://rize2day.com/api/item/acceptBid
+data: {
+  itemId: item id
+}
+description: accept a bid to sell listed nft from auction
+
+
+
+
